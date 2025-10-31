@@ -8,22 +8,19 @@
     @yield('css')
 
     <style type="text/css">
-        /* ===== TEMA BLANCO Y NEGRO PROFESIONAL COMPLETO ===== */
+        /* ===== TEMA NARANJA PROFESIONAL COMPLETO ===== */
         :root {
-            --negro-primario: #1a1a1a;
-            --negro-secundario: #2d2d2d;
-            --gris-oscuro: #4a4a4a;
-            --gris-medio: #6c757d;
-            --gris-claro: #9e9e9e;
-            --gris-muy-claro: #e0e0e0;
-            --blanco: #ffffff;
-            --blanco-roto: #f8f9fa;
-            --gradiente-negro: linear-gradient(135deg, #1a1a1a, #2d2d2d);
-            --gradiente-gris: linear-gradient(135deg, #4a4a4a, #6c757d);
-            --texto-oscuro: #1a1a1a;
+            --naranja-primario: #FF6B35;
+            --naranja-secundario: #E55A2B;
+            --naranja-claro: #FF8C5A;
+            --naranja-oscuro: #CC552B;
+            --naranja-gradiente: linear-gradient(135deg, #FF6B35, #E55A2B);
+            --fondo-oscuro: #2C3E50;
+            --texto-oscuro: #2C3E50;
             --texto-medio: #495057;
-            --texto-claro: #6c757d;
-            --borde-claro: #dee2e6;
+            --texto-claro: #6C757D;
+            --fondo-claro: #F8F9FA;
+            --borde-claro: #E9ECEF;
         }
 
         /* ===== RESET PROFESIONAL ===== */
@@ -39,14 +36,14 @@
 
         /* ===== HEADER PROFESIONAL ===== */
         .navbar.navbar-white.navbar-light {
-            background: var(--gradiente-negro) !important;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+            background: var(--naranja-gradiente) !important;
+            box-shadow: 0 2px 15px rgba(255, 107, 53, 0.3);
             border-bottom: none;
             padding: 0.5rem 1rem;
         }
 
         .main-header .navbar {
-            background: var(--gradiente-negro) !important;
+            background: var(--naranja-gradiente) !important;
             min-height: 60px;
         }
 
@@ -73,7 +70,7 @@
 
         /* ===== SIDEBAR ELEGANTE ===== */
         .sidebar-dark-primary {
-            background-color: var(--negro-secundario) !important;
+            background-color: var(--fondo-oscuro) !important;
             box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
         }
 
@@ -87,16 +84,16 @@
         }
 
         .sidebar-dark-primary .nav-sidebar .nav-item .nav-link.active {
-            background-color: var(--negro-primario) !important;
+            background-color: var(--naranja-primario) !important;
             color: white !important;
-            border-left: 4px solid var(--blanco) !important;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            border-left: 4px solid var(--naranja-primario) !important;
+            box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
         }
 
         .sidebar-dark-primary .nav-sidebar .nav-item .nav-link:hover {
-            background-color: rgba(255, 255, 255, 0.1) !important;
-            color: var(--blanco) !important;
-            border-left: 3px solid var(--gris-claro);
+            background-color: rgba(255, 107, 53, 0.1) !important;
+            color: var(--naranja-claro) !important;
+            border-left: 3px solid var(--naranja-claro);
         }
 
         .brand-link {
@@ -116,16 +113,15 @@
         }
 
         .btn.btn-primary {
-            background: var(--gradiente-negro) !important;
+            background: var(--naranja-gradiente) !important;
             color: white !important;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 6px rgba(255, 107, 53, 0.3);
         }
 
         .btn.btn-primary:hover,
         .btn.btn-primary:focus {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            background: var(--negro-primario) !important;
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
         }
 
         .btn-sm {
@@ -145,7 +141,6 @@
             box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
             margin-bottom: 1.5rem;
-            background: var(--blanco);
         }
 
         .card:hover {
@@ -168,12 +163,12 @@
         }
 
         .card-primary:not(.card-outline) > .card-header {
-            background: var(--gradiente-negro) !important;
+            background: var(--naranja-gradiente) !important;
             color: white !important;
         }
 
         .card-primary.card-outline {
-            border-top: 4px solid var(--negro-primario) !important;
+            border-top: 4px solid var(--naranja-primario) !important;
         }
 
         /* ===== TABLAS ELEGANTES ===== */
@@ -185,7 +180,7 @@
         }
 
         .table thead th {
-            background: var(--gradiente-negro) !important;
+            background: var(--naranja-gradiente) !important;
             color: white !important;
             border: none;
             font-weight: 600;
@@ -203,7 +198,7 @@
         }
 
         .table tbody tr:hover {
-            background-color: rgba(0, 0, 0, 0.03);
+            background-color: rgba(255, 107, 53, 0.03);
         }
 
         /* ===== SMALL BOX MEJORADO ===== */
@@ -247,11 +242,11 @@
             transform: scale(1.1);
         }
 
-        .bg-primary { background: var(--gradiente-negro) !important; }
-        .bg-info { background: linear-gradient(135deg, #6c757d, #495057) !important; }
-        .bg-success { background: linear-gradient(135deg, #4a4a4a, #2d2d2d) !important; }
-        .bg-warning { background: linear-gradient(135deg, #9e9e9e, #6c757d) !important; }
-        .bg-danger { background: linear-gradient(135deg, #343a40, #1a1a1a) !important; }
+        .bg-primary { background: var(--naranja-gradiente) !important; }
+        .bg-info { background: linear-gradient(135deg, #17a2b8, #138496) !important; }
+        .bg-success { background: linear-gradient(135deg, #28a745, #1e7e34) !important; }
+        .bg-warning { background: linear-gradient(135deg, #ffc107, #e0a800) !important; }
+        .bg-danger { background: linear-gradient(135deg, #dc3545, #c82333) !important; }
 
         /* ===== BADGES MODERNOS ===== */
         .badge {
@@ -262,25 +257,25 @@
         }
 
         .badge-primary {
-            background: var(--gradiente-negro) !important;
+            background: var(--naranja-gradiente) !important;
             color: white !important;
         }
 
-        .badge-success { background: linear-gradient(135deg, #4a4a4a, #2d2d2d) !important; color: white !important; }
-        .badge-warning { background: linear-gradient(135deg, #9e9e9e, #6c757d) !important; color: white !important; }
-        .badge-danger { background: linear-gradient(135deg, #343a40, #1a1a1a) !important; color: white !important; }
-        .badge-info { background: linear-gradient(135deg, #6c757d, #495057) !important; color: white !important; }
+        .badge-success { background: linear-gradient(135deg, #28a745, #1e7e34) !important; }
+        .badge-warning { background: linear-gradient(135deg, #ffc107, #e0a800) !important; }
+        .badge-danger { background: linear-gradient(135deg, #dc3545, #c82333) !important; }
+        .badge-info { background: linear-gradient(135deg, #17a2b8, #138496) !important; }
 
         /* ===== LINKS PROFESIONALES ===== */
         a:not(.btn):not(.nav-link):not(.dropdown-item) {
-            color: var(--negro-primario) !important;
+            color: var(--naranja-secundario) !important;
             font-weight: 500;
             text-decoration: none;
             transition: all 0.3s ease;
         }
 
         a:not(.btn):not(.nav-link):not(.dropdown-item):hover {
-            color: var(--gris-oscuro) !important;
+            color: var(--naranja-oscuro) !important;
             text-decoration: underline;
         }
 
@@ -306,7 +301,7 @@
         }
 
         .breadcrumb-item a {
-            color: var(--negro-primario) !important;
+            color: var(--naranja-secundario) !important;
             font-weight: 500;
         }
 
@@ -323,8 +318,8 @@
         }
 
         .form-control:focus {
-            border-color: var(--negro-primario);
-            box-shadow: 0 0 0 0.2rem rgba(26, 26, 26, 0.25);
+            border-color: var(--naranja-primario);
+            box-shadow: 0 0 0 0.2rem rgba(255, 107, 53, 0.25);
         }
 
         label {
@@ -335,15 +330,15 @@
 
         /* ===== PAGINACIÓN ===== */
         .pagination .page-link {
-            color: var(--negro-primario);
+            color: var(--naranja-secundario);
             border-radius: 6px;
             margin: 0 2px;
             border: 1px solid #dee2e6;
         }
 
         .pagination .page-item.active .page-link {
-            background: var(--gradiente-negro) !important;
-            border-color: var(--negro-secundario);
+            background: var(--naranja-gradiente) !important;
+            border-color: var(--naranja-secundario);
             color: white;
         }
 
@@ -361,8 +356,8 @@
         }
 
         .dropdown-item:hover {
-            background-color: rgba(0, 0, 0, 0.05);
-            color: var(--negro-primario) !important;
+            background-color: rgba(255, 107, 53, 0.1);
+            color: var(--naranja-primario) !important;
         }
 
         /* ===== ALERTAS Y NOTIFICACIONES ===== */
@@ -373,21 +368,18 @@
         }
 
         .alert-success {
-            background: linear-gradient(135deg, #e8e8e8, #d5d5d5);
-            color: #1a1a1a;
-            border-left: 4px solid #4a4a4a;
+            background: linear-gradient(135deg, #d4edda, #c3e6cb);
+            color: #155724;
         }
 
         .alert-warning {
-            background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
-            color: #2d2d2d;
-            border-left: 4px solid #6c757d;
+            background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+            color: #856404;
         }
 
         .alert-danger {
-            background: linear-gradient(135deg, #d8d8d8, #c5c5c5);
-            color: #1a1a1a;
-            border-left: 4px solid #343a40;
+            background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+            color: #721c24;
         }
 
         /* ===== PROGRESS BARS ===== */
@@ -398,7 +390,7 @@
         }
 
         .progress-bar {
-            background: var(--gradiente-negro) !important;
+            background: var(--naranja-gradiente) !important;
             border-radius: 10px;
         }
 
@@ -462,7 +454,7 @@
         }
 
         .text-gradient-primary {
-            background: var(--gradiente-negro);
+            background: var(--naranja-gradiente);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
