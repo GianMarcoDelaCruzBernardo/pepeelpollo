@@ -15,7 +15,7 @@
             --gris-oscuro: #4a4a4a;
             --gris-medio: #6c757d;
             --gris-claro: #9e9e9e;
-            --gris-muy-claro: #e0e0e0;
+            --gris-muy-claro: #ff0000ff;
             --blanco: #ffffff;
             --blanco-roto: #f8f9fa;
             --gradiente-negro: linear-gradient(135deg, #1a1a1a, #2d2d2d);
